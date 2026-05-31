@@ -19,20 +19,36 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate stats card
+      - name: Generate stats card light
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&count_private=true&show_icons=true&include_all_commits=true&theme=default
-          path: profile/stats.svg
+          path: profile/stats-light.svg
           token: ${{ secrets.GH_README_STATS_TOKEN || secrets.GITHUB_TOKEN }}
 
-      - name: Generate top languages card
+      - name: Generate stats card dark
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&count_private=true&show_icons=true&include_all_commits=true&theme=github_dark
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GH_README_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card light
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&theme=default
-          path: profile/top-langs.svg
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&card_width=320&theme=default
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GH_README_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card dark
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&card_width=320&theme=github_dark
+          path: profile/top-langs-dark.svg
           token: ${{ secrets.GH_README_STATS_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
