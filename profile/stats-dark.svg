@@ -8,7 +8,7 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Shota Fuchikami's GitHub Stats, Rank: C</title>
+        <title id="titleId">Shota Fuchikami&#39;s GitHub Stats, Rank: C</title>
         <desc id="descId">Total Stars Earned: 0, Total Commits  : 49, Total PRs: 18, Total Issues: 1, Contributed to (last year): 0</desc>
         <style>
           .header {
@@ -126,7 +126,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Shota Fuchikami's GitHub Stats</text>
+      >Shota Fuchikami&#39;s GitHub Stats</text>
     </g>
       </g>
     
